@@ -1,0 +1,13 @@
+########################################################################
+# Git Übersicht
+########################################################################
+
+######################### Grundlegende Befehle #########################
+git init							# Dadurch erstellt man erst das git repository
+git add <FILENAME>						# Datei zum Repository hinzufügen
+git commit -m 'ERLÄUTERUNG DER ÄNDERUNG'			# Fügt den Änderungskommentar an beim ersten Mal 'First Commit'
+git remote add origin https://github.com/h3Nn35/REPOSITORY.git	# Adresse zur Repository auf github.com
+git push -u origin master					# Lädt die (veränderten) Dateien hoch
+git status							# Zeigt an welche Dateien verändert wurden
+git diff							# Zeigt an was in den Dateien geändert wurde
+git log								# Zeigt was, wann, von wem verändert wurde
