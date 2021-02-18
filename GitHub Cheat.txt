@@ -11,3 +11,4 @@ git push -u origin master					# Lädt die (veränderten) Dateien hoch
 git status							# Zeigt an welche Dateien verändert wurden
 git diff							# Zeigt an was in den Dateien geändert wurde
 git log								# Zeigt was, wann, von wem verändert wurde
+git pull https://github.com/h3Nn35/REPOSITORY
