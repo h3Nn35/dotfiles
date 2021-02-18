@@ -1,2 +1,2 @@
-set number
+set nu rnu
 set cursorline
