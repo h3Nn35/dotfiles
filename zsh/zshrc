@@ -14,6 +14,12 @@ setopt nocheckjobs										# Beim Beenden nicht vor laufenden Prozessen warnen
 setopt numericglobsort									# Dateinamen numerisch sortieren, falls sinnvoll
 
 alias ll='ls -AlF --color=auto --group-directories-first'
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+alias mkdir='mkdir -pv'
+alias chmod='sudo chmod -v'
+alias chown='sudo chown -v'
 
 # Autosuggestion einschalten
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -29,7 +35,7 @@ autoload -Uz compinit promptinit
 compinit -d ~/.cache/zcompdump
 promptinit
 
-# Standard Prompt Walters Theme
+# Prompt Theme
 prompt adam2
 
 # History
