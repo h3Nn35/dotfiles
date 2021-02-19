@@ -8,8 +8,6 @@ setopt autocd											# Ohne "cd" das Verzeichnis wechseln
 setopt complete_aliases									# Aliase automatisch vervollständigen
 setopt correct											# Automatisch Fehler korrigieren
 setopt extendedglob										# Ermöglich es normale Befehle mit * zu nutzen
-setopt histignorealldups								# Wenn ein Befehl mehrmals vorkommt, wird der ältere entfernt
-setopt inc_append_history								# Befehle werden sofort an die History angehangen und nicht erst beim beenden
 setopt nobeep											# Kein Beep
 setopt nocaseglob
 setopt nocheckjobs										# Beim Beenden nicht vor laufenden Prozessen warnen
@@ -19,6 +17,9 @@ alias ll='ls -AlF --color=auto --group-directories-first'
 
 # Autosuggestion einschalten
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Syntax highlighting einschalten
+source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zstyle
 zstyle ':completion:*' menu select
@@ -30,3 +31,36 @@ promptinit
 
 # Standard Prompt Walters Theme
 prompt adam2
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=200000
+setopt histignorealldups								# Wenn ein Befehl mehrmals vorkommt, wird der ältere entfernt
+setopt hist_expire_dups_first							# Wenn die History voll ist, zuerst Duplikate löschen
+setopt inc_append_history								# Befehle werden sofort an die History angehangen und nicht erst beim beenden
+alias history='history 0'
+
+# Keybindings
+bindkey -e												# emacs key bindings
+bindkey ' ' magic-space									# do history expansion on space
+bindkey '^[[3~' delete-char								# Entf Taste
+bindkey '^[[3;5~' kill-word								# STRG + SUPER Wort löschen
+bindkey '^[[H' beginning-of-line						# Pos1 Taste
+bindkey '^[[F' end-of-line								# Ende Taste
+bindkey '^[[1;5C' forward-word							# STRG + -> Ein Wort nach vorne
+bindkey '^[[1;5D' backward-word							# STRG + <- Ein Wort zurück
+bindkey '^[[5~' beginning-of-buffer-or-history			# Bild hoch Taste
+bindkey '^[[6~' end-of-buffer-or-history				# Bild runter Taste
+
+# Neue Zeile nach ENTER
+neue_zeile=yes
+precmd() {
+	if [ "$neue_zeile" = yes ]; then
+		if [ -z "$_neue_zeile" ]; then
+			_neue_zeile=1
+		else
+			print ""
+		fi
+	fi
+}
