@@ -1,0 +1,32 @@
+#############################################################################
+#                               .zshrc                                      #
+#############################################################################
+
+# Optionen
+setopt appendhistory									# History anhängen statt überschreiben
+setopt autocd											# Ohne "cd" das Verzeichnis wechseln
+setopt complete_aliases									# Aliase automatisch vervollständigen
+setopt correct											# Automatisch Fehler korrigieren
+setopt extendedglob										# Ermöglich es normale Befehle mit * zu nutzen
+setopt histignorealldups								# Wenn ein Befehl mehrmals vorkommt, wird der ältere entfernt
+setopt inc_append_history								# Befehle werden sofort an die History angehangen und nicht erst beim beenden
+setopt nobeep											# Kein Beep
+setopt nocaseglob
+setopt nocheckjobs										# Beim Beenden nicht vor laufenden Prozessen warnen
+setopt numericglobsort									# Dateinamen numerisch sortieren, falls sinnvoll
+
+# zstyle
+zstyle ':completion:*' menu select
+
+# Autovervollständigung aus der History
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+# Autovervollständigung und erweiterte Promptunterstützung laden
+autoload -Uz compinit promptinit
+compinit -d ~/.cache/zcompdump
+promptinit
+
+# Standard Prompt Walters Theme
+prompt walters
