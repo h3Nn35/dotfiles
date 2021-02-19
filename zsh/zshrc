@@ -16,10 +16,10 @@ setopt numericglobsort									# Dateinamen numerisch sortieren, falls sinnvoll
 alias ll='ls -AlF --color=auto --group-directories-first'
 
 # Autosuggestion einschalten
-source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Syntax highlighting einschalten
-source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zstyle
 zstyle ':completion:*' menu select
