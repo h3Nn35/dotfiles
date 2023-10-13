@@ -36,7 +36,7 @@ main()  {
         # printf "${rot}Admin-Rechte werden benötigt. Bitte mit sudo ausführen."
         # exit $?
         # If the sudo command exists, try rerunning as admin
-        if [is_command sudo] ; then
+        if is_command sudo ; then
             printf "%b  %b Sudo utility check\\n" "${OVER}"  "${TICK}"
 
             # when run via curl piping
