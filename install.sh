@@ -14,7 +14,7 @@ is_command() {
     # The function returns 0 (success) if the command exists, and 1 if it doesn't.
     local check_command="$1"
 
-    command -v "${check_command}" >/dev/null 2>&1
+    command -v "${check_command}" # >/dev/null 2>&1
 }
 
 show_logo(){
@@ -36,7 +36,7 @@ main()  {
         # printf "${rot}Admin-Rechte werden benötigt. Bitte mit sudo ausführen."
         # exit $?
         # If the sudo command exists, try rerunning as admin
-        if is_command sudo ; then
+        if [is_command sudo] ; then
             printf "%b  %b Sudo utility check\\n" "${OVER}"  "${TICK}"
 
             # when run via curl piping
