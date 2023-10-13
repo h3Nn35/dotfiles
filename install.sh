@@ -16,9 +16,9 @@ is_command() {
 
     if command -v "${check_command}" >/dev/null 2>&1
     then
-        exit 0
+        return 0
     else
-        exit 1
+        return 1
     fi
 }
 
