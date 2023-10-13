@@ -47,10 +47,12 @@ main()  {
             # when run via curl piping
             if [[ "$0" == "bash" ]]; then
                 # Download the install script and run it with admin rights
-                exec curl -sSL https://github.com/h3Nn35/dotfiles/raw/master/install.sh | sudo bash "$@"
+                # exec curl -sSL https://github.com/h3Nn35/dotfiles/raw/master/install.sh | sudo bash "$@"
+                echo "bash"
             else
                 # when run via calling local bash script
-                exec sudo bash "$0" "$@"
+                # exec sudo bash "$0" "$@"
+                echo "no bash"
             fi
 
             exit $?
