@@ -14,7 +14,12 @@ is_command() {
     # The function returns 0 (success) if the command exists, and 1 if it doesn't.
     local check_command="$1"
 
-    command -v "${check_command}" # >/dev/null 2>&1
+    if command -v "${check_command}" >/dev/null 2>&1
+    then
+        exit 0
+    else
+        exit 1
+    fi
 }
 
 show_logo(){
