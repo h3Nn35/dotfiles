@@ -121,9 +121,7 @@ export LS_COLORS
 export PATH="$HOME/.local/bin:$PATH"
 
 # Set up fzf key bindings and fuzzy completion
-if command fzf -v &> /dev/null; then
-	eval "$(fzf --bash)"
-fi
+eval "$(fzf --bash)"
 
 # Start fastfetch
 if command fastfetch -v &> /dev/null; then
