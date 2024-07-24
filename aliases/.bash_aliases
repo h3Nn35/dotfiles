@@ -45,7 +45,6 @@
         alias dir='dir -hN --color=auto --group-directories-first'
         alias dirl='dir -AlF --color=auto --group-directories-first'
         alias dira='dir -AhN --color=auto --group-directories-first'
-        alias ls='ls -AlFhN --color=auto --group-directories-first'
 		alias ll='ls'
 		alias la='ls'
         # alias ll='ls -AlFh --color=auto --group-directories-first'
@@ -67,3 +66,10 @@
 		
     # Wake On LAN	
 		alias wol="./wol.sh"
+
+	# ---- Eza (better ls) -----
+		if command -v eza &> /dev/null; then
+			alias ls="eza --icons=auto --group-directories-first --color=auto -T --level=1 -a"
+		else	
+			alias ls='ls -AlFhN --color=auto --group-directories-first'
+		fi
