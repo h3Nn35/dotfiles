@@ -58,6 +58,11 @@
 	# Bat anstelle von cat nutzen
 		if command -v bat &> /dev/null; then
 			alias cat='bat'
+		else
+			# Ubuntu spezial
+			if command -v batcat &> /dev/null; then
+				alias cat='batcat'
+			fi
 		fi
 
 
