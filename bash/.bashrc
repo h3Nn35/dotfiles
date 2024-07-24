@@ -124,3 +124,8 @@ export PATH="$HOME/.local/bin:$PATH"
 if command fzf -v &> /dev/null; then
 	eval "$(fzf --bash)"
 fi
+
+# Start fastfetch
+if command fastfetch -v &> /dev/null; then
+	fastfetch
+fi
