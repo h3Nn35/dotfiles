@@ -65,11 +65,5 @@
 			fi
 		fi
 		
-		# Ubuntu Spezial
-		if command -v batcat &> /dev/null; then
-			alias cat='batcat'
-		fi
-
-
     # Wake On LAN	
 		alias wol="./wol.sh"
