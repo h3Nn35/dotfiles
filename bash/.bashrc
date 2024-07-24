@@ -121,4 +121,6 @@ export LS_COLORS
 export PATH="$HOME/.local/bin:$PATH"
 
 # Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
+if command fzf -v &> /dev/null; then
+	eval "$(fzf --bash)"
+fi
