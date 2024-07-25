@@ -25,6 +25,13 @@ font pango:HackNerdFont 10
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id ~/.config/i3/display_setup.sh
 
+# Fenster nicht über die Bar ziehen
+for_window [class="^.*"] border pixel 1
+
+# Gaps zwischen Fenstern und am Rand (optional, um Platz für Polybar zu schaffen)
+gaps inner 10
+gaps outer 10
+
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
