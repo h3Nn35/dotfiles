@@ -163,18 +163,3 @@ function build_prompt {
 
 # Call the function to set the prompt
 build_prompt
-
-# Funktion to transform apt to nala, if nala is installed
-if command -v nala &> /dev/null; then
-	apt() { 
-		command nala "$@"
-	}
-	sudo() {
-		if [ "$1" = "apt" ]; then
-			shift
-			command sudo nala "$@"
-		else
-			command sudo "$@"
-		fi
-	}
-fi

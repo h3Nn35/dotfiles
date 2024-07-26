@@ -75,3 +75,19 @@
 		fi
 	# Eigenes TLDR überprüfen und Alias einbinden
 	#	if [ -f ~/.local/bin/tldr/tldr.sh
+
+
+    # Funktion to transform apt to nala, if nala is installed
+    if command -v nala &> /dev/null; then
+        apt() { 
+            command nala "$@"
+        }
+        sudo() {
+            if [ "$1" = "apt" ]; then
+                shift
+                command sudo nala "$@"
+            else
+                command sudo "$@"
+            fi
+        }
+    fi
