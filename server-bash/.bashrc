@@ -125,6 +125,9 @@ function build_prompt {
     # Linux-Logo
     local linuxLogo="🐧 "
 
+	# Hostname
+    local hostName="\h"
+
     # Aktuelles Verzeichnis
     local currentPath="\w"
 
@@ -135,7 +138,7 @@ function build_prompt {
     fi
 
     # Prompt-Zeilen erstellen
-    local promptLine1="$linuxLogo $currentPath$gitBranch"
+    local promptLine1="$linuxLogo $hostName: $currentPath $gitBranch"
     local promptLine2="> "
 
     # Prompt setzen
