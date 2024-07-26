@@ -28,3 +28,18 @@ if command -v fastfetch &> /dev/null; then
 fi
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# Funktion to transform apt to nala, if nala is installed
+if command -v nala &> /dev/null; then
+	apt() {
+		command nala "$@"
+	}
+	sudo() {
+		if [ "$1" = "apt" ]; then
+			shift
+			command sudo nala "$@"
+		else
+			command sudo "$@"
+		fi
+	}
+fi
