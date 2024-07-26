@@ -73,3 +73,5 @@
 		else	
 			alias ls='ls -AlFhN --color=auto --group-directories-first'
 		fi
+	# Eigenes TLDR überprüfen und Alias einbinden
+	#	if [ -f ~/.local/bin/tldr/tldr.sh

@@ -121,9 +121,16 @@ export LS_COLORS
 export PATH="$HOME/.local/bin:$PATH"
 
 # Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if command -v fzf &> /dev/null; then
+	eval "$(fzf --bash)"
+fi
 
 # Start fastfetch
-if command fastfetch -v &> /dev/null; then
+if command -v fastfetch &> /dev/null; then
 	fastfetch
+fi
+
+if [ -f ~/.cargo/env ]; then
+	. "$HOME/.cargo/env"
 fi
