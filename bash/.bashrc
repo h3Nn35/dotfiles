@@ -131,6 +131,7 @@ if command -v fastfetch &> /dev/null; then
 	fastfetch
 fi
 
+# Rust
 if [ -f ~/.cargo/env ]; then
 	. "$HOME/.cargo/env"
 fi
