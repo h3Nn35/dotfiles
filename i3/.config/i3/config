@@ -29,9 +29,10 @@ exec --no-startup-id ~/.config/i3/display_setup.sh
 for_window [class="^.*"] border pixel 1
 
 # Gaps zwischen Fenstern und am Rand (optional, um Platz für Polybar zu schaffen)
-gaps inner 10
-gaps outer 10
-
+#smart_gaps on
+#gaps inner 10
+#gaps outer 30
+#for_window [class="^.*"] border pixel 1
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart

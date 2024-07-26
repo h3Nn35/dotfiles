@@ -26,3 +26,5 @@ fi
 if command -v fastfetch &> /dev/null; then
 	fastfetch
 fi
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
