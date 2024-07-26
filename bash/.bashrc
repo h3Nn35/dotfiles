@@ -135,3 +135,28 @@ fi
 if [ -f ~/.cargo/env ]; then
 	. "$HOME/.cargo/env"
 fi
+
+# Function to generate prompt
+function build_prompt {
+    # Linux-Logo
+    local linuxLogo="🐧 "
+
+    # Aktuelles Verzeichnis
+    local currentPath="\w"
+
+    # Git-Branch (falls vorhanden)
+    local gitBranch=""
+    if [ -d ".git" ]; then
+        gitBranch="[$(git rev-parse --abbrev-ref HEAD 2>/dev/null)]"
+    fi
+
+    # Prompt-Zeilen erstellen
+    local promptLine1="$linuxLogo $currentPath$gitBranch"
+    local promptLine2="> "
+
+    # Prompt setzen
+    PS1="\n\[\e[36m\]$promptLine1\[\e[0m\]\n\[\e[37m\]$promptLine2\[\e[0m\]"
+}
+
+# Call the function to set the prompt
+build_prompt
