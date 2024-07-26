@@ -123,7 +123,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # Function to generate prompt
 function build_prompt {
     # Linux-Logo
-    local linuxLogo="🐧"
+    local linuxLogo="🐧 "
 
     # Aktuelles Verzeichnis
     local currentPath="\w"
