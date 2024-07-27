@@ -17,7 +17,9 @@ compinit
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if command -v zfz &> /dev/null; then
+	source <(fzf --zsh)
+fi
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases

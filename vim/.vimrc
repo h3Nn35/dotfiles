@@ -60,3 +60,10 @@ if ! isdirectory(expand(&g:undodir))
 endif
 
 
+" Set cursor to beam in all modes
+if &term =~ 'xterm\\|rxvt'
+  let &t_SI = "\e[6 q"  " Set beam cursor in insert mode
+  let &t_SR = "\e[6 q"  " Set beam cursor in replace mode
+  let &t_EI = "\e[6 q"  " Set beam cursor in normal mode
+endif
+
