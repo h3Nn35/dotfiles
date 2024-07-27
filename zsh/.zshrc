@@ -160,7 +160,7 @@ fi
 #                                                        #
 ##########################################################
 
-if [ -d /homelinuxbrew ]; then
+if [ -d /home/linuxbrew ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
