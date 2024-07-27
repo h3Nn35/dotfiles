@@ -175,5 +175,7 @@ fi
 ############################################################
 
 ## Shell integrations
-eval "$(fzf --zsh)"
+if command -v &> /dev/null; then
+	eval "$(fzf --zsh)"
+fi
 
