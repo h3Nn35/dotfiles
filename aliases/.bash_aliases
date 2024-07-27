@@ -91,3 +91,6 @@
             fi
         }
     fi
+
+	# easy cd
+		alias ..='cd ..'

@@ -53,3 +53,6 @@
         else
             alias ls='ls -AlFhN --color=auto --group-directories-first'
         fi
+
+	# easy cd
+		alias ..='cd ..'
