@@ -160,8 +160,14 @@ fi
 #                                                        #
 ##########################################################
 
+## Linux
 if [ -d /home/linuxbrew ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+## MacOS
+if [ -d /opt/homebrew ]; then 
+	export PATH=/opt/homebrew/bin:$PATH
 fi
 
 
