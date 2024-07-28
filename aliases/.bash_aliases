@@ -97,5 +97,5 @@
 
   	# git push vereinfachen
 		if command -v git &> /dev/null; then
-			alias push='git add . && git commit -m "Text" && git push'
+			alias push='git add . && git commit -m "No commit text" && git push'
 		fi
