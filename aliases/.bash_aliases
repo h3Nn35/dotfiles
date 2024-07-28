@@ -94,3 +94,8 @@
 
 	# easy cd
 		alias ..='cd ..'
+
+  	# git push vereinfachen
+		if command -v git &> /dev/null; then
+			alias push='git add . && git commit -m "Text" && git push'
+		fi

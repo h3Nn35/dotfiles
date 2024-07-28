@@ -147,3 +147,8 @@ function build_prompt {
 
 # Call the function to set the prompt
 build_prompt
+
+# Add Path to manuel installed nvim
+if [ -d /opt/nvim-linux64 ]; then
+	export PATH="$PATH:/opt/nvim-linux64/bin"
+fi
