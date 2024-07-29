@@ -153,5 +153,23 @@ if [ -d /opt/nvim-linux64 ]; then
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 fi
 
-export VISUAL=nano
-export EDITOR=nano
+
+################################
+#  _____    _ _ _              #
+# | ____|__| (_) |_ ___  _ __  #
+# |  _| / _` | | __/ _ \| '__| #
+# | |__| (_| | | || (_) | |    #
+# |_____\__,_|_|\__\___/|_|    #
+#                              #
+################################
+
+if command -v nvim &> /dev/null; then
+  export VISUAL=nvim
+  export EDITOR=nvim
+elif command -v vim &> /dev/null; then
+  export VISUAL=vim
+  export EDITOR=vim
+else
+  export VISUAL=nano
+  export EDITOR=nano
+fi
