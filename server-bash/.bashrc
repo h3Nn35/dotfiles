@@ -152,3 +152,6 @@ build_prompt
 if [ -d /opt/nvim-linux64 ]; then
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 fi
+
+export VISUAL=nano
+export EDITOR=nano
