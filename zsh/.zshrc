@@ -181,7 +181,7 @@ fi
 ############################################################
 
 ## Shell integrations
-if command -v &> /dev/null; then
+if command -v fzf &> /dev/null; then
 	eval "$(fzf --zsh)"
 fi
 
