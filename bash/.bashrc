@@ -163,3 +163,6 @@ function build_prompt {
 
 # Call the function to set the prompt
 build_prompt
+
+export VISUAL=nano
+export EDITOR=nano
