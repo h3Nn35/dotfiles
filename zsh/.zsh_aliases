@@ -50,9 +50,9 @@
 	# ---- Eza (better ls) -----
 		if command -v eza &> /dev/null; then
 			alias ls="eza --icons=auto --group-directories-first --color=auto -T --level=1 -A"
-        else
-            alias ls='ls -AlFhn --color=auto --group-directories-first'
-        fi
+    else
+      alias ls='ls -AlFhn --color=auto --group-directories-first'
+    fi
 
 	# easy cd
 		alias ..='cd ..'
