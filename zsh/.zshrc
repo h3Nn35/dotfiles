@@ -128,29 +128,6 @@ setopt hist_ignore_dups			# Duplikate nicht speichern
 setopt hist_find_no_dups		# In der Suche tauchen keine Duplikate auf
 
 
-#####################################
-#     _    _ _                      #
-#    / \  | (_) __ _ ___  ___  ___  #
-#   / _ \ | | |/ _` / __|/ _ \/ __| #
-#  / ___ \| | | (_| \__ \  __/\__ \ #
-# /_/   \_\_|_|\__,_|___/\___||___/ #
-#                                   #
-#####################################
-
-if [ -f ~/.zsh_aliases ]; then
-    source ~/.zsh_aliases
-fi
-
-## ---- Eza (better ls) -----
-#if command -v eza &> /dev/null; then
-#	alias ls="eza --icons=auto --group-directories-first --color=auto -T --level=1 -a"
-#else
-#	alias ls='ls -AlFhN --color=auto --group-directories-first'
-#fi
-
-#alias ls='ls --color'
-
-
 ##########################################################
 #  _   _                        ____                     #
 # | | | | ___  _ __ ___   ___  | __ ) _ __ _____      __ #
@@ -197,6 +174,8 @@ fi
 
 if command -v fastfetch &> /dev/null; then
 	fastfetch
+elif command -v neofetch &> /dev/null; then
+  neofetch
 fi
 
 ################################
@@ -218,4 +197,27 @@ else
   export VISUAL=nano
   export EDITOR=nano
 fi
+
+
+#####################################
+#     _    _ _                      #
+#    / \  | (_) __ _ ___  ___  ___  #
+#   / _ \ | | |/ _` / __|/ _ \/ __| #
+#  / ___ \| | | (_| \__ \  __/\__ \ #
+# /_/   \_\_|_|\__,_|___/\___||___/ #
+#                                   #
+#####################################
+
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
+## ---- Eza (better ls) -----
+#if command -v eza &> /dev/null; then
+#	alias ls="eza --icons=auto --group-directories-first --color=auto -T --level=1 -a"
+#else
+#	alias ls='ls -AlFhN --color=auto --group-directories-first'
+#fi
+
+#alias ls='ls --color'
 
